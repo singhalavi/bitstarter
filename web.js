@@ -9,7 +9,7 @@ app.get('/', function(request, response) {
 	if (err) throw err;
 	console.log(data); var buffer = new Buffer(100);
 	var len = buffer.write(data);
-	response.send(buffer.toString("utf-8", 0, len));
+	response.send(buffer.toString("ascii", 0, len));
 
     });
     //var buffer = new Buffer(100);
